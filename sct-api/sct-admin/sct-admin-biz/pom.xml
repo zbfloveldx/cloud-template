@@ -60,7 +60,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
             <exclusions>
-                <!-- 排除 tomcat-jdbc 以使用 HikariCP -->
+                <!--排除 tomcat-jdbc 以使用 HikariCP-->
                 <exclusion>
                     <groupId>org.apache.tomcat</groupId>
                     <artifactId>tomcat-jdbc</artifactId>
@@ -72,7 +72,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <version>5.1.1</version>
         </dependency>
 
         <!-- Web依赖 -->

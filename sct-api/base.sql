@@ -18,7 +18,7 @@ CREATE TABLE `ClientDetails` (
   `additionalInformation` varchar(4096) DEFAULT NULL,
   `autoApproveScopes` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`appId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for oauth_access_token
@@ -33,7 +33,7 @@ CREATE TABLE `oauth_access_token` (
   `authentication` blob,
   `refresh_token` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`authentication_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for oauth_approvals
@@ -65,7 +65,7 @@ CREATE TABLE `oauth_client_details` (
   `additional_information` varchar(4096) DEFAULT NULL,
   `autoapprove` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`client_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oauth_client_details
@@ -85,7 +85,7 @@ CREATE TABLE `oauth_client_token` (
   `user_name` varchar(256) DEFAULT NULL,
   `client_id` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`authentication_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for oauth_code
@@ -118,7 +118,7 @@ CREATE TABLE `sys_user` (
   `avatar` varchar(255) DEFAULT NULL COMMENT '头像',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_user
