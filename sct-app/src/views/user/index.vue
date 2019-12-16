@@ -70,7 +70,7 @@
         listLoading: true,
         listQuery: {
           page: 1,
-          limit: 3,
+          limit: 20,
           importance: undefined,
           title: undefined,
           type: undefined,

@@ -67,7 +67,7 @@ public class SysUserController extends BaseController {
     @PostMapping("/list")
     @ApiOperation(value = "分页、条件查询用户列表信息")
     @ApiImplicitParam(name = "user", value = "查询条件", required = true, dataType = "SysUser", paramType = "body")
-    public Result<Map> list(SysUser user, QueryPage queryPage) {
+    public Result<Map> list(@RequestBody SysUser user, QueryPage queryPage) {
         return new Result<Map>(this.selectByPageNumSize(queryPage, () -> sysUserService.list(user)));
     }
 
