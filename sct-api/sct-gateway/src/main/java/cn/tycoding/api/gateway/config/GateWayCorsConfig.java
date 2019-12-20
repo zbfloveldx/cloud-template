@@ -9,8 +9,8 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  * 处理跨域请求
- *
- * @author tycoding
+ * zuul实现Cors跨域的两种方式：corsFilter、继承ZuulFilter
+ * @author zbf
  * @date 2019-05-23
  */
 @Component
